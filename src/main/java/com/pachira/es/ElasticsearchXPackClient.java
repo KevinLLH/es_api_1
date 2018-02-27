@@ -30,7 +30,7 @@ public class ElasticsearchXPackClient {
                 .put("xpack.security.user", "elastic:2$6l7k3T*y47^KkRO04S")
                 .put("cluster.name", "elasticsearch")
                 .build();
-        client = new PreBuiltXPackTransportClient(settings)
+        client = new PreBuiltXPackTransportClient(settings.EMPTY)
                 .addTransportAddress(new TransportAddress(InetAddress.getByName("127.0.0.1"), 9300));
 //        final CredentialsProvider credentialsProvider = new BasicCredentialsProvider();
 //        credentialsProvider.setCredentials(AuthScope.ANY,
